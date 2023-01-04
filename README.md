@@ -4,10 +4,15 @@ Run the application
 
 Service will run on port 9003 by default.
 
-curl http://localhost:9003/secured-api (403)
-curl http://localhost:9003/public/open-api (200 OK)
+```shell
+curl http://localhost:9003/public/open-api
+```
 
-MyFilter is supposed to be called only once for /secured-api, but isn't.
+```shell
+curl http://localhost:9003/secured-api
+```
+
+`MyFilter` is supposed to be called only once for /secured-api, but isn't.
 
 ```java
 2023-01-04T11:34:28.456+01:00  INFO 64283 --- [           main] com.kao.spring.DemoApplication           : Starting DemoApplication using Java 17.0.4.1 with PID 64283 (/Users/Gabriel.Dinant/Documents/repositories/private/ecowaste/spring-boot-security-filter-debug/target/classes started by Gabriel.Dinant in /Users/Gabriel.Dinant/Documents/repositories/private/ecowaste)
